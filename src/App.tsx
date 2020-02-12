@@ -38,7 +38,6 @@ export const App: React.FC<AppProps> = () => {
               <option value="mid">Mid</option>
               <option value="low">Low</option>
             </select>
-            {/* <button type="submit" value="Submit" /> */}
           </div>
           <button type="submit">Submit</button>
         </form>
