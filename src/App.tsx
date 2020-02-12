@@ -4,20 +4,44 @@ import './App.css';
 interface AppProps {}
 
 export const App: React.FC<AppProps> = () => {
+  const [name, setName] = React.useState('');
+  const [income, setIncome] = React.useState('');
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setName(e.target.value);
+  };
+
+  const handleIncomeSelect = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ): void => {
+    setIncome(e.target.value);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+
+    console.log('state = ', name, income);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <span>Name: </span>
+            <input type="text" value={name} onChange={handleNameChange} />
+          </div>
+          <div>
+            <span>Income: </span>
+            <select value={income} onChange={handleIncomeSelect}>
+              <option value="high">High</option>
+              <option value="mid">Mid</option>
+              <option value="low">Low</option>
+            </select>
+            {/* <button type="submit" value="Submit" /> */}
+          </div>
+          <button type="submit">Submit</button>
+        </form>
       </header>
     </div>
   );
