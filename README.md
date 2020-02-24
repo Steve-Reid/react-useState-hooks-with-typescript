@@ -1,4 +1,4 @@
-This is a small form app that demonstrates how React [useState hooks](https://reactjs.org/docs/hooks-reference.html#usestate) can be uttilised to control the state of a form.
+This is a small form app that demonstrates how React [useState hooks](https://reactjs.org/docs/hooks-reference.html#usestate) can be utilised to control the state of a form.
 
 Built from a [Starter project boilerplate](https://github.com/Steve-Reid/create-react-app-typescript) that has been configured with [Typescript](https://www.typescriptlang.org/) [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/).
 
